@@ -66,6 +66,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 100px;
 `;
 
 const Top = styled.div`

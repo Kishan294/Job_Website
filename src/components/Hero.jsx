@@ -30,7 +30,7 @@ const Hero = () => {
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-left: 100px;
+  margin-left: 150px;
 `;
 
 const LeftCol = styled.div`

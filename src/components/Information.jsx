@@ -73,6 +73,7 @@ const Info = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
+  margin-top: 30px;
 `;
 
 const Logo = styled.div`

@@ -42,7 +42,9 @@ const Wrapper = styled.div`
   position: fixed;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px); ;
+  -webkit-backdrop-filter: blur(4px); 
+  z-index: 2;
+
 `;
 
 const Left = styled.div`
