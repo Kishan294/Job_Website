@@ -4,10 +4,15 @@
   font-family: "Poppins", sans-serif;
   color: #02004e;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html {
+  width: 1440px;
+}
 body {
   background-color: #fffaf9;
   overflow-x: hidden;
+  width: 100%;
 }
-

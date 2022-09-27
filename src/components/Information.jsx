@@ -84,6 +84,10 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    box-shadow: none;
+  }
 `;
 
 const Box = styled.div`
@@ -99,11 +103,19 @@ const Box = styled.div`
   &:nth-child(2) ${Logo} {
     background: #025af3;
     box-shadow: 4px 8px 20px rgba(2, 90, 243, 0.25);
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 
   &:nth-child(3) ${Logo} {
     background: #fff508;
     box-shadow: 4px 8px 20px rgba(255, 245, 8, 0.4);
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 `;
 

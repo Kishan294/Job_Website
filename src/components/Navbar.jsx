@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Flip from "react-reveal/Fade";
+// import Flip from "react-reveal/Fade";
 
 const Navbar = () => {
   return (
     <div>
       <Wrapper>
-        <Flip>
           <Left>Logo</Left>
           <Middle>
             <ul>
@@ -28,7 +27,6 @@ const Navbar = () => {
             </ul>
           </Middle>
           <Right>Sign Up</Right>
-        </Flip>
       </Wrapper>
     </div>
   );
@@ -36,14 +34,20 @@ const Navbar = () => {
 
 export default Navbar;
 const Wrapper = styled.div`
+  width: 100%;
+  height: 70px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 10px 100px;
+  align-items: center;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); ;
 `;
 
 const Left = styled.div`
   cursor: pointer;
+  margin-left: 100px;
 `;
 
 const Middle = styled.nav`
@@ -58,8 +62,33 @@ const Middle = styled.nav`
   }
   a {
     text-decoration: none;
-    color: #02004e;
+    color: #3b3b3b;
     font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: visibility 0.3s ease-in-out;
+
+    &:hover {
+      color: #02004e;
+      /* font-weight: 600; */
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #02004e;
+      width: 5px;
+      border-radius: 50%;
+      height: 5px;
+      top: 0;
+      transform: translate(-50%, -50%);
+      bottom: 0;
+      visibility: hidden;
+    }
+    &:hover::before {
+      visibility: visible;
+    }
   }
 `;
 
@@ -74,4 +103,10 @@ const Right = styled.button`
   border: 1px solid #ef4703;
   border-radius: 30px;
   cursor: pointer;
+  margin-right: 100px;
+
+  &:hover {
+    background: transparent;
+    color: #02004e;
+  }
 `;
